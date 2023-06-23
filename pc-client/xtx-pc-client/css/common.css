@@ -1,0 +1,212 @@
+/* 版心公共类 */
+.container {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+
+
+/* ---------------------- 快捷菜单模块: .xtx-shortcut */
+
+.xtx-shortcut {
+  height: 52px;
+  background-color: #333;
+}
+
+.xtx-shortcut .container {
+  height: 52px;
+}
+
+.xtx-shortcut ul li {
+  float: left;
+  /* 垂直居中 */
+  line-height: 52px;
+  color: #666666;
+}
+
+.xtx-shortcut ul a {
+  margin: 0 16px;
+  font-size: 14px;
+  color: #dcdcdc;
+}
+
+/* 最后一个li标签中的a 标签没有右内边距 */
+.xtx-shortcut li:last-child a {
+  margin-right: 0;
+}
+
+.xtx-shortcut li:last-child a::before {
+  content: '';
+  /* 伪元素默认是行内元素，没法直接设置宽高，所以正常这里是看不到的。 */
+  display: inline-block;
+  width: 11px;
+  height: 16px;
+  /* background-color: red; */
+  background: url('../images/sprites.png') -160px -70px;
+  /* 修改对齐方式为中部对齐，而不是基线对齐 */
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-right: 8px;
+}
+
+
+/* ---------------------- 主导航模块: .xtx-main-nav */
+.xtx-main-nav {
+  height: 130px;
+  /* padding 会将盒子撑大 */
+  padding-top: 30px;
+  /* 需要进行自动内减 */
+  box-sizing: border-box;
+}
+
+.xtx-main-nav .logo {
+  width: 207px;
+  height: 70px;
+  margin-left: 25px;
+}
+
+.xtx-main-nav .logo a {
+  display: block;
+  height: 70px;
+  background: url('../images/logo.png');
+  background-size: 100%;
+  font-size: 0;
+}
+
+.xtx-main-nav nav {
+  margin-left: 40px;
+}
+
+.xtx-main-nav nav li {
+  float: left;
+  height: 70px;
+  margin-right: 48px;
+  line-height: 70px;
+}
+
+.xtx-main-nav nav a:hover {
+  color: #27ba9b;
+  border-bottom: 1px solid #27ba9b;
+  padding-bottom: 7px;
+}
+
+.xtx-main-nav .search {
+  /* 子绝父相：父元素相对定位 */
+  position: relative;
+  width: 172px;
+  height: 30px;
+  margin-top: 24px;
+  margin-left: 34px;
+}
+
+.xtx-main-nav .search::before {
+  /* 伪元素的必须元素 */
+  content: '';
+  /* 子绝父相：子元素绝对定位 */
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+
+  background: url('../images/sprites.png') -80px -70px;
+}
+
+.xtx-main-nav .search input {
+  width: 172px;
+  height: 30px;
+  padding-left: 30px;
+  border-bottom: 2px solid #e7e7e7;
+}
+
+.xtx-main-nav .cart {
+  /* 子绝父相：父元素相对定位 */
+  position: relative;
+  width: 23px;
+  height: 23px;
+  margin-top: 28px;
+  margin-left: 15px;
+  background: url('../images/sprites.png') -120px -70px;
+}
+
+.xtx-main-nav .cart span {
+  /* 子绝父相：子元素绝对定位 */
+  position: absolute;
+  right: -12px;
+  top: -5px;
+  width: 20px;
+  height: 15px;
+  background-color: #e26237;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  line-height: 15px;
+}
+
+
+/* ---------------------- 宣传服务: .xtx-service */
+.xtx-service {
+  height: 174px;
+  background-color: #333;
+}
+
+.xtx-service .container {
+  width: 1393px;
+  height: 173px;
+  border-bottom: 1px solid #434343;
+}
+
+.xtx-service .container a {
+  float: left;
+  width: 33.33%;
+  height: 173px;
+  text-align: center;
+  line-height: 173px;
+  font-size: 28px;
+  color: #fff;
+}
+
+.xtx-service .container a::before {
+  content: '';
+  width: 58px;
+  height: 58px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 19px;
+
+  background: url('../images/sprites.png');
+}
+
+.xtx-service a:nth-child(2)::before {
+  background: url('../images/sprites.png') -130px 0;
+}
+
+.xtx-service a:nth-child(3)::before {
+  background: url('../images/sprites.png') -65px 0;
+}
+
+
+/* ---------------------- 版权信息: .xtx-copyright */
+.xtx-copyright {
+  height: 168px;
+  background-color: #333;
+}
+
+.xtx-copyright .container {
+  padding-top: 41px;
+  box-sizing: border-box;
+  height: 168px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+
+.xtx-copyright .container a {
+  color: #999;
+}
+
+.xtx-copyright .container p {
+  height: 35px;
+}
+
